@@ -17,7 +17,7 @@ fs.ensureDir(uploadPath); // Make sure that he upload path exits
  */
 app.route('/upload').post((req, res, next) => {
 
-    req.pipe(req.busboy); // Pipe it trough busboy
+    req.pipe(req.busboy); // Pipe it through busboy
 
     req.busboy.on('file', (fieldname, file, filename) => {
         console.log(`Upload of '${filename}' started`);
